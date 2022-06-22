@@ -1,10 +1,8 @@
 package ex01;
 
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 /**
  * 1. 스프링부트 애플리케이션의 부트스트래핑 역할(Bootstrapping Class)
@@ -13,12 +11,6 @@ import org.springframework.context.annotation.Bean;
  */
 @SpringBootApplication
 public class HelloSpringBootApplication {
-	
-	@Bean
-	public ApplicationRunner applicationRunner() {
-		return new MyComponent();
-	}
-	
 	public static void main(String[] args) {
 		/**
 		 * SpringApplication.run(...) 안에서 일어나는 일(bootstrap):
